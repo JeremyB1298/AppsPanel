@@ -21,7 +21,7 @@ class SignUpRepository {
         let jsonEncoder = JSONEncoder()
         do {
             let data = try jsonEncoder.encode(signUpDTO)
-            self.apiService.request(fromURLString: ApiValues.SIGNUP_URL, headers: ["X-AP-Key":"uD4Muli8nO6nzkSlsNM3d1Pm", "X-AP-DeviceUID":"trial", "Accept":"application/json", "Content-Type":"multipart/form-data"], completion: { result in
+            self.apiService.request(fromURLString: ApiValues.SIGNUP_URL, headers: ["X-AP-Key":ApiValues.KEY, "X-AP-DeviceUID":"trial", "Accept":"application/json", "Content-Type":"multipart/form-data"], completion: { result in
                 switch result {
                 case .success(let data):
                     if let response = self.apiService.parse(T: ResponseSignUpDTO.self, jsonData: data) {

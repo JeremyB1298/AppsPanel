@@ -18,7 +18,7 @@ class EventRepository {
     }
     
     func retrieveEvents(completion: @escaping (([Event]?) -> Void)) {
-        self.apiService.request(fromURLString: ApiValues.EVENTS_URL, headers: ["X-AP-Key":"uD4Muli8nO6nzkSlsNM3d1Pm", "X-AP-DeviceUID":"trial", "Accept":"application/json"]) { result in
+        self.apiService.request(fromURLString: ApiValues.EVENTS_URL, headers: ["X-AP-Key":ApiValues.KEY, "X-AP-DeviceUID":"trial", "Accept":"application/json"]) { result in
             switch result {
             case .success(let data):
                 if var eventsDTO = self.apiService.parse(T: [EventDTO].self, jsonData: data) {

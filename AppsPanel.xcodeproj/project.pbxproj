@@ -40,6 +40,7 @@
 		36D2A1D0267E2721002E962F /* ResponseSignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1CF267E2721002E962F /* ResponseSignUpMapper.swift */; };
 		36D2A1D3267E333C002E962F /* EventImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1D2267E333C002E962F /* EventImageViewController.swift */; };
 		36D2A1D5267E3350002E962F /* EventImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D2A1D4267E3350002E962F /* EventImageViewController.xib */; };
+		36D2A1D7267E394F002E962F /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1D6267E394F002E962F /* ViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		36D2A1CF267E2721002E962F /* ResponseSignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSignUpMapper.swift; sourceTree = "<group>"; };
 		36D2A1D2267E333C002E962F /* EventImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventImageViewController.swift; sourceTree = "<group>"; };
 		36D2A1D4267E3350002E962F /* EventImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventImageViewController.xib; sourceTree = "<group>"; };
+		36D2A1D6267E394F002E962F /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +209,6 @@
 			isa = PBXGroup;
 			children = (
 				36D2A181267DE0F4002E962F /* ApiService.swift */,
-				36D2A182267DE0F4002E962F /* ApiValues.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -274,6 +275,7 @@
 		36D2A1A8267DF2BC002E962F /* values */ = {
 			isa = PBXGroup;
 			children = (
+				36D2A182267DE0F4002E962F /* ApiValues.swift */,
 				36D2A1A9267DF2CB002E962F /* CellIdentifierValues.swift */,
 			);
 			path = values;
@@ -284,6 +286,7 @@
 			children = (
 				36D2A1B0267E0237002E962F /* Calendar+Extension.swift */,
 				36D2A1BF267E155C002E962F /* String+Extension.swift */,
+				36D2A1D6267E394F002E962F /* ViewController+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				36D2A1A7267DF106002E962F /* EventViewModel.swift in Sources */,
 				36D2A184267DE0F4002E962F /* ApiValues.swift in Sources */,
 				36D2A1C0267E155C002E962F /* String+Extension.swift in Sources */,
+				36D2A1D7267E394F002E962F /* ViewController+Extension.swift in Sources */,
 				36D2A1B1267E0237002E962F /* Calendar+Extension.swift in Sources */,
 				36D2A1A3267DEE60002E962F /* EventTableViewCell.swift in Sources */,
 				36D2A1CA267E25A2002E962F /* DetailResponseSignUpDTO.swift in Sources */,

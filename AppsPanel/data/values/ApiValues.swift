@@ -12,4 +12,6 @@ enum ApiValues {
     static let EVENTS_URL: String = BASE_URL + "/events"
     static let INFOS_URL: String = BASE_URL + "/html"
     static let SIGNUP_URL: String = BASE_URL + "/authentication/register"
+    
+    static let KEY: String = "uD4Muli8nO6nzkSlsNM3d1Pm"
 }

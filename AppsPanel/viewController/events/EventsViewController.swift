@@ -21,18 +21,29 @@ class EventsViewController: UIViewController {
         self.setupUI()
         self.setupData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "Actualités"
+    }
 }
 
 private extension EventsViewController {
     
     func setupData() {
-        
         self.eventViewModel = EventViewModel(eventRepository: EventRepository(apiService: ApiService(), eventMapper: EventMapper()))
         self.eventViewModel.retrieveEvents { [weak self] events in
-            self?.events = events
-            DispatchQueue.main.async {
-                self?.eventsTableView.reloadData()
+            if let events = events {
+                self?.events = events
+                DispatchQueue.main.async {
+                    self?.eventsTableView.reloadData()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self?.displayErrorAlert()
+                }
             }
+            
         }
     }
     

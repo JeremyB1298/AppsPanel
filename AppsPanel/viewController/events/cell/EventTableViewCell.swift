@@ -19,9 +19,8 @@ class EventTableViewCell: UITableViewCell {
         self.titleLabel.text = event.title
         self.descriptionLabel.text = event.description
         self.dateLabel.text = event.stringPublichedAt
-        if let imageUrl = event.pictureUrl {
-            let data = try? Data(contentsOf: imageUrl)
-            imgView.image = UIImage(data: data!)
+        if let imageUrl = event.pictureUrl, let data = try? Data(contentsOf: imageUrl) {
+            imgView.image = UIImage(data: data)
         }
     }
     

@@ -16,8 +16,12 @@ class InfosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUI()
         self.setupData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "Infos"
     }
     
 }
@@ -25,16 +29,16 @@ private extension InfosViewController {
     func setupData() {
         self.infoViewModel = InfoViewModel(infoRepository: InfoRepository(apiService: ApiService()))
         
-        self.infoViewModel.retrieveStringHtml { stringHtml in
+        self.infoViewModel.retrieveStringHtml { [weak self] stringHtml in
             if let stringHtml = stringHtml {
                 DispatchQueue.main.async {
-                    self.infosWKWebView.loadHTMLString(stringHtml, baseURL: nil)
+                    self?.infosWKWebView.loadHTMLString(stringHtml, baseURL: nil)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self?.displayErrorAlert()
                 }
             }
         }
-    }
-    
-    func setupUI() {
-        self.navigationController?.navigationBar.topItem?.title = "Infos"
     }
 }

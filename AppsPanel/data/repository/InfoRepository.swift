@@ -14,12 +14,13 @@ class InfoRepository {
     }
     
     func retrieveData(completion: @escaping ((String?) -> Void)) {
-        self.apiService.request(fromURLString: ApiValues.INFOS_URL, headers: ["X-AP-Key":"uD4Muli8nO6nzkSlsNM3d1Pm", "X-AP-DeviceUID":"trial", "Accept":"text/html"]) { result in
+        self.apiService.request(fromURLString: ApiValues.INFOS_URL, headers: ["X-AP-Key":ApiValues.KEY, "X-AP-DeviceUID":"trial", "Accept":"text/html"]) { result in
             switch result {
             case .success(let data):
                 completion(String(decoding: data, as: UTF8.self))
                 
             case .failure(let error):
+                completion(nil)
                 print(error.localizedDescription)
             }
         }

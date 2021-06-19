@@ -24,6 +24,11 @@ class SignUpViewController: UIViewController {
         self.setupData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "Inscription"
+    }
+    
     @IBAction func actionSignUp(_ sender: UIButton) {
         if self.checkFieldsFilled() {
             self.sendSignUp()
@@ -44,11 +49,9 @@ private extension SignUpViewController {
         self.lastNameTextField.delegate = self
         self.emailTextField.delegate = self
         self.phoneTextField.delegate = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -79,9 +82,9 @@ private extension SignUpViewController {
     
     func sendSignUp() {
         if let lastName = lastNameTextField.text, let email = emailTextField.text, let phone = phoneTextField.text {
-            self.signUpViewModel.sendSignUp(name: lastName, email: email, phone: phone, completion: { responseSignUp in
+            self.signUpViewModel.sendSignUp(name: lastName, email: email, phone: phone, completion: { [weak self] responseSignUp in
                 DispatchQueue.main.async {
-                    self.displayResultRequest(response: responseSignUp)
+                    self?.displayResultRequest(response: responseSignUp)
                 }
             })
         }
@@ -100,6 +103,8 @@ private extension SignUpViewController {
                     break
                 }
             })
+        } else {
+            self.displayErrorAlert()
         }
         
     }
