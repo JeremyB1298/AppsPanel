@@ -18,6 +18,10 @@
 		36D2A184267DE0F4002E962F /* ApiValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A182267DE0F4002E962F /* ApiValues.swift */; };
 		36D2A187267DE102002E962F /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A186267DE102002E962F /* EventRepository.swift */; };
 		36D2A189267DE199002E962F /* EventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A188267DE199002E962F /* EventDTO.swift */; };
+		36D2A18F267DE4BF002E962F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A18E267DE4BF002E962F /* Event.swift */; };
+		36D2A191267DE501002E962F /* EventMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A190267DE501002E962F /* EventMapper.swift */; };
+		36D2A197267DE79B002E962F /* EventMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A196267DE79B002E962F /* EventMapperTests.swift */; };
+		36D2A19A267DE9BC002E962F /* EventRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A199267DE9BC002E962F /* EventRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		36D2A182267DE0F4002E962F /* ApiValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiValues.swift; sourceTree = "<group>"; };
 		36D2A186267DE102002E962F /* EventRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
 		36D2A188267DE199002E962F /* EventDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDTO.swift; sourceTree = "<group>"; };
+		36D2A18E267DE4BF002E962F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		36D2A190267DE501002E962F /* EventMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapper.swift; sourceTree = "<group>"; };
+		36D2A196267DE79B002E962F /* EventMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapperTests.swift; sourceTree = "<group>"; };
+		36D2A199267DE9BC002E962F /* EventRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,8 @@
 		36D2A160267DE06D002E962F /* AppsPanelTests */ = {
 			isa = PBXGroup;
 			children = (
+				36D2A198267DE9A8002E962F /* repository */,
+				36D2A192267DE6F2002E962F /* mapper */,
 				36D2A161267DE06D002E962F /* AppsPanelTests.swift */,
 				36D2A163267DE06D002E962F /* Info.plist */,
 			);
@@ -137,8 +147,10 @@
 		36D2A17C267DE0BF002E962F /* data */ = {
 			isa = PBXGroup;
 			children = (
+				36D2A18C267DE4A2002E962F /* mapper */,
 				36D2A185267DE0F8002E962F /* repository */,
 				36D2A180267DE0E6002E962F /* api */,
+				36D2A18D267DE4AD002E962F /* entity */,
 				36D2A17D267DE0C3002E962F /* dto */,
 			);
 			path = data;
@@ -165,6 +177,38 @@
 			isa = PBXGroup;
 			children = (
 				36D2A186267DE102002E962F /* EventRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		36D2A18C267DE4A2002E962F /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A190267DE501002E962F /* EventMapper.swift */,
+			);
+			path = mapper;
+			sourceTree = "<group>";
+		};
+		36D2A18D267DE4AD002E962F /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A18E267DE4BF002E962F /* Event.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		36D2A192267DE6F2002E962F /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A196267DE79B002E962F /* EventMapperTests.swift */,
+			);
+			path = mapper;
+			sourceTree = "<group>";
+		};
+		36D2A198267DE9A8002E962F /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A199267DE9BC002E962F /* EventRepositoryTests.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -302,8 +346,10 @@
 				36D2A189267DE199002E962F /* EventDTO.swift in Sources */,
 				36D2A14F267DE06A002E962F /* ViewController.swift in Sources */,
 				36D2A183267DE0F4002E962F /* ApiService.swift in Sources */,
+				36D2A191267DE501002E962F /* EventMapper.swift in Sources */,
 				36D2A184267DE0F4002E962F /* ApiValues.swift in Sources */,
 				36D2A187267DE102002E962F /* EventRepository.swift in Sources */,
+				36D2A18F267DE4BF002E962F /* Event.swift in Sources */,
 				36D2A14B267DE06A002E962F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D2A19A267DE9BC002E962F /* EventRepositoryTests.swift in Sources */,
 				36D2A162267DE06D002E962F /* AppsPanelTests.swift in Sources */,
+				36D2A197267DE79B002E962F /* EventMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
