@@ -138,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="-257" y="968"/>
         </scene>
-        <!--Item 1-->
+        <!--Actualités-->
         <scene sceneID="Xlm-sG-MOP">
             <objects>
                 <viewController id="igh-OS-7IJ" customClass="EventsViewController" customModule="AppsPanel" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,7 +160,7 @@
                             <constraint firstItem="Gvh-H3-4cH" firstAttribute="leading" secondItem="FTJ-Ls-8zf" secondAttribute="leading" id="v6f-3G-Axq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Cnz-Gx-sni"/>
+                    <tabBarItem key="tabBarItem" title="Actualités" id="Cnz-Gx-sni"/>
                     <connections>
                         <outlet property="eventsTableView" destination="Gvh-H3-4cH" id="ptA-1o-nZY"/>
                     </connections>

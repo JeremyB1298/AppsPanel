@@ -26,6 +26,7 @@ class EventsViewController: UIViewController {
 private extension EventsViewController {
     
     func setupData() {
+        
         self.eventViewModel = EventViewModel(eventRepository: EventRepository(apiService: ApiService(), eventMapper: EventMapper()))
         self.eventViewModel.retrieveEvents { [weak self] events in
             self?.events = events
