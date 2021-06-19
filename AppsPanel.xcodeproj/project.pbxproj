@@ -28,6 +28,16 @@
 		36D2A1B7267E07F7002E962F /* InfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1B6267E07F7002E962F /* InfosViewController.swift */; };
 		36D2A1B9267E0C47002E962F /* InfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1B8267E0C47002E962F /* InfoRepository.swift */; };
 		36D2A1BB267E0DAA002E962F /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */; };
+		36D2A1BE267E128A002E962F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1BD267E128A002E962F /* SignUpViewController.swift */; };
+		36D2A1C0267E155C002E962F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1BF267E155C002E962F /* String+Extension.swift */; };
+		36D2A1C2267E1E74002E962F /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1C1267E1E74002E962F /* SignUpRepository.swift */; };
+		36D2A1C4267E1ED3002E962F /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1C3267E1ED3002E962F /* SignUpDTO.swift */; };
+		36D2A1C6267E211E002E962F /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1C5267E211E002E962F /* SignUpViewModel.swift */; };
+		36D2A1C8267E256D002E962F /* ResponseSignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1C7267E256D002E962F /* ResponseSignUpDTO.swift */; };
+		36D2A1CA267E25A2002E962F /* DetailResponseSignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1C9267E25A2002E962F /* DetailResponseSignUpDTO.swift */; };
+		36D2A1CC267E26B5002E962F /* DetailResponseSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1CB267E26B5002E962F /* DetailResponseSignUp.swift */; };
+		36D2A1CE267E26E9002E962F /* ResponseSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1CD267E26E9002E962F /* ResponseSignUp.swift */; };
+		36D2A1D0267E2721002E962F /* ResponseSignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1CF267E2721002E962F /* ResponseSignUpMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +85,16 @@
 		36D2A1B6267E07F7002E962F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
 		36D2A1B8267E0C47002E962F /* InfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRepository.swift; sourceTree = "<group>"; };
 		36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		36D2A1BD267E128A002E962F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		36D2A1BF267E155C002E962F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		36D2A1C1267E1E74002E962F /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		36D2A1C3267E1ED3002E962F /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
+		36D2A1C5267E211E002E962F /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		36D2A1C7267E256D002E962F /* ResponseSignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSignUpDTO.swift; sourceTree = "<group>"; };
+		36D2A1C9267E25A2002E962F /* DetailResponseSignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseSignUpDTO.swift; sourceTree = "<group>"; };
+		36D2A1CB267E26B5002E962F /* DetailResponseSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseSignUp.swift; sourceTree = "<group>"; };
+		36D2A1CD267E26E9002E962F /* ResponseSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSignUp.swift; sourceTree = "<group>"; };
+		36D2A1CF267E2721002E962F /* ResponseSignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSignUpMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				36D2A188267DE199002E962F /* EventDTO.swift */,
+				36D2A1C3267E1ED3002E962F /* SignUpDTO.swift */,
+				36D2A1C7267E256D002E962F /* ResponseSignUpDTO.swift */,
+				36D2A1C9267E25A2002E962F /* DetailResponseSignUpDTO.swift */,
 			);
 			path = dto;
 			sourceTree = "<group>";
@@ -190,6 +213,7 @@
 			children = (
 				36D2A186267DE102002E962F /* EventRepository.swift */,
 				36D2A1B8267E0C47002E962F /* InfoRepository.swift */,
+				36D2A1C1267E1E74002E962F /* SignUpRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -198,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				36D2A190267DE501002E962F /* EventMapper.swift */,
+				36D2A1CF267E2721002E962F /* ResponseSignUpMapper.swift */,
 			);
 			path = mapper;
 			sourceTree = "<group>";
@@ -206,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				36D2A18E267DE4BF002E962F /* Event.swift */,
+				36D2A1CB267E26B5002E962F /* DetailResponseSignUp.swift */,
+				36D2A1CD267E26E9002E962F /* ResponseSignUp.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -213,6 +240,7 @@
 		36D2A19B267DEB09002E962F /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				36D2A1BC267E1261002E962F /* signup */,
 				36D2A1B5267E07EA002E962F /* infos */,
 				36D2A19C267DEB12002E962F /* events */,
 			);
@@ -250,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				36D2A1B0267E0237002E962F /* Calendar+Extension.swift */,
+				36D2A1BF267E155C002E962F /* String+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -261,6 +290,15 @@
 				36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */,
 			);
 			path = infos;
+			sourceTree = "<group>";
+		};
+		36D2A1BC267E1261002E962F /* signup */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A1BD267E128A002E962F /* SignUpViewController.swift */,
+				36D2A1C5267E211E002E962F /* SignUpViewModel.swift */,
+			);
+			path = signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,17 +433,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D2A189267DE199002E962F /* EventDTO.swift in Sources */,
+				36D2A1C2267E1E74002E962F /* SignUpRepository.swift in Sources */,
+				36D2A1CC267E26B5002E962F /* DetailResponseSignUp.swift in Sources */,
+				36D2A1C6267E211E002E962F /* SignUpViewModel.swift in Sources */,
+				36D2A1CE267E26E9002E962F /* ResponseSignUp.swift in Sources */,
 				36D2A1B9267E0C47002E962F /* InfoRepository.swift in Sources */,
 				36D2A183267DE0F4002E962F /* ApiService.swift in Sources */,
 				36D2A191267DE501002E962F /* EventMapper.swift in Sources */,
+				36D2A1D0267E2721002E962F /* ResponseSignUpMapper.swift in Sources */,
 				36D2A1B7267E07F7002E962F /* InfosViewController.swift in Sources */,
 				36D2A1BB267E0DAA002E962F /* InfoViewModel.swift in Sources */,
 				36D2A1A7267DF106002E962F /* EventViewModel.swift in Sources */,
 				36D2A184267DE0F4002E962F /* ApiValues.swift in Sources */,
+				36D2A1C0267E155C002E962F /* String+Extension.swift in Sources */,
 				36D2A1B1267E0237002E962F /* Calendar+Extension.swift in Sources */,
 				36D2A1A3267DEE60002E962F /* EventTableViewCell.swift in Sources */,
+				36D2A1CA267E25A2002E962F /* DetailResponseSignUpDTO.swift in Sources */,
+				36D2A1BE267E128A002E962F /* SignUpViewController.swift in Sources */,
 				36D2A187267DE102002E962F /* EventRepository.swift in Sources */,
+				36D2A1C4267E1ED3002E962F /* SignUpDTO.swift in Sources */,
 				36D2A18F267DE4BF002E962F /* Event.swift in Sources */,
+				36D2A1C8267E256D002E962F /* ResponseSignUpDTO.swift in Sources */,
 				36D2A14B267DE06A002E962F /* AppDelegate.swift in Sources */,
 				36D2A19E267DEB38002E962F /* EventsViewController.swift in Sources */,
 				36D2A1AA267DF2CB002E962F /* CellIdentifierValues.swift in Sources */,
@@ -585,6 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVX2G28UM6;
 				INFOPLIST_FILE = AppsPanel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -603,6 +652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AVX2G28UM6;
 				INFOPLIST_FILE = AppsPanel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

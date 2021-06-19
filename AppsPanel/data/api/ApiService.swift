@@ -9,12 +9,14 @@ import UIKit
 
 class ApiService {
     
-    func loadJson(fromURLString urlString: String, headers: Dictionary<String, String>, completion: @escaping (Result<Data, Error>) -> Void) {
+    func request(fromURLString urlString: String, headers: Dictionary<String, String>, completion: @escaping ((Result<Data, Error>) -> Void), httpMethod: String = "GET", parameters: Data? = nil) {
         
         var request = URLRequest(url: URL(string: urlString)!)
         headers.forEach { key, value in
             request.setValue(value, forHTTPHeaderField: key)
         }
+        request.httpMethod = httpMethod
+        request.httpBody = parameters
         
         let urlSession = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {

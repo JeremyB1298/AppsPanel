@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,7 +42,100 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSP-ja-i60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="552"/>
+            <point key="canvasLocation" x="-226" y="202"/>
+        </scene>
+        <!--Inscription-->
+        <scene sceneID="DjC-mr-FA2">
+            <objects>
+                <viewController id="kct-No-4bX" customClass="SignUpViewController" customModule="AppsPanel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBx-MC-iaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="6DY-WQ-tPn">
+                                <rect key="frame" x="16" y="306" width="382" height="289.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Rpj-aA-cVT">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSo-aI-af4">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre nom de famille" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHv-vm-SpI">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Lz3-p5-BFs">
+                                        <rect key="frame" x="0.0" y="86.5" width="382" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wv9-Bf-ZAD">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre adresse mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Em4-OW-fCd">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uKU-jR-L4g">
+                                        <rect key="frame" x="0.0" y="173" width="382" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgE-wg-lNn">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Votre numéro de téléphone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Klx-MO-3Pu">
+                                                <rect key="frame" x="0.0" y="20.5" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-Mv-cOH">
+                                        <rect key="frame" x="0.0" y="259.5" width="382" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="s'inscrire">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionSignUp:" destination="kct-No-4bX" eventType="touchUpInside" id="GZb-7z-VV5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hd8-15-Vgj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hd8-15-Vgj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6DY-WQ-tPn" secondAttribute="bottom" id="2Qy-sS-peo"/>
+                            <constraint firstItem="6DY-WQ-tPn" firstAttribute="centerY" secondItem="hd8-15-Vgj" secondAttribute="centerY" id="bDH-2J-Nm3"/>
+                            <constraint firstItem="hd8-15-Vgj" firstAttribute="trailing" secondItem="6DY-WQ-tPn" secondAttribute="trailing" constant="16" id="mwC-nh-5rM"/>
+                            <constraint firstItem="6DY-WQ-tPn" firstAttribute="leading" secondItem="hd8-15-Vgj" secondAttribute="leading" constant="16" id="o70-40-AWV"/>
+                            <constraint firstItem="6DY-WQ-tPn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hd8-15-Vgj" secondAttribute="top" id="skF-Fa-t6n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inscription" id="SY5-9d-pAE"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Em4-OW-fCd" id="5ZU-G6-xKZ"/>
+                        <outlet property="lastNameTextField" destination="kHv-vm-SpI" id="gJa-uV-e9h"/>
+                        <outlet property="phoneTextField" destination="Klx-MO-3Pu" id="BLk-P9-HVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFr-r3-SAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="968"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Xlm-sG-MOP">
@@ -72,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="714-7A-2ls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="-224"/>
+            <point key="canvasLocation" x="-226" y="-490"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dM1-x0-DcD">
@@ -103,6 +197,7 @@
                     <connections>
                         <segue destination="igh-OS-7IJ" kind="relationship" relationship="viewControllers" id="Y9Y-EV-VN4"/>
                         <segue destination="fY7-SW-ry5" kind="relationship" relationship="viewControllers" id="S6i-Dh-oei"/>
+                        <segue destination="kct-No-4bX" kind="relationship" relationship="viewControllers" id="tet-WX-vMb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOK-gm-5Md" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,6 +206,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

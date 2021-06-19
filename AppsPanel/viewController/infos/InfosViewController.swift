@@ -12,7 +12,7 @@ class InfosViewController: UIViewController {
     
     @IBOutlet weak var infosWKWebView: WKWebView!
     
-    private var infoViewModel: InfoViewModel?
+    private var infoViewModel: InfoViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ private extension InfosViewController {
     func setupData() {
         self.infoViewModel = InfoViewModel(infoRepository: InfoRepository(apiService: ApiService()))
         
-        self.infoViewModel?.retrieveStringHtml { stringHtml in
+        self.infoViewModel.retrieveStringHtml { stringHtml in
             if let stringHtml = stringHtml {
                 DispatchQueue.main.async {
                     self.infosWKWebView.loadHTMLString(stringHtml, baseURL: nil)
