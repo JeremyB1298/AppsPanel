@@ -62,4 +62,13 @@ extension EventsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as?  EventTableViewCell {
+            let detailViewController = EventImageViewController(image: cell.imgView.image!)
+            detailViewController.modalPresentationStyle = .fullScreen
+            self.present(detailViewController, animated: true, completion: nil)
+            
+        }
+    }
 }
