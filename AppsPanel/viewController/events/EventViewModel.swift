@@ -13,7 +13,9 @@ class EventViewModel {
     }
     
     func retrieveEvents(completion: @escaping (([Event]?) -> Void)) {
-        self.eventRepository.retrieveEvents(completion: completion)
+        self.eventRepository.retrieveEvents { event in
+            completion(event?.sorted(by: { Double($0.publishedAt ?? 0) > Double($1.publishedAt ?? 0) }))
+        }
     }
     
 }

@@ -25,6 +25,9 @@
 		36D2A1A7267DF106002E962F /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1A6267DF106002E962F /* EventViewModel.swift */; };
 		36D2A1AA267DF2CB002E962F /* CellIdentifierValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1A9267DF2CB002E962F /* CellIdentifierValues.swift */; };
 		36D2A1B1267E0237002E962F /* Calendar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1B0267E0237002E962F /* Calendar+Extension.swift */; };
+		36D2A1B7267E07F7002E962F /* InfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1B6267E07F7002E962F /* InfosViewController.swift */; };
+		36D2A1B9267E0C47002E962F /* InfoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1B8267E0C47002E962F /* InfoRepository.swift */; };
+		36D2A1BB267E0DAA002E962F /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		36D2A1A6267DF106002E962F /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		36D2A1A9267DF2CB002E962F /* CellIdentifierValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifierValues.swift; sourceTree = "<group>"; };
 		36D2A1B0267E0237002E962F /* Calendar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Extension.swift"; sourceTree = "<group>"; };
+		36D2A1B6267E07F7002E962F /* InfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosViewController.swift; sourceTree = "<group>"; };
+		36D2A1B8267E0C47002E962F /* InfoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRepository.swift; sourceTree = "<group>"; };
+		36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				36D2A186267DE102002E962F /* EventRepository.swift */,
+				36D2A1B8267E0C47002E962F /* InfoRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 		36D2A19B267DEB09002E962F /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				36D2A1B5267E07EA002E962F /* infos */,
 				36D2A19C267DEB12002E962F /* events */,
 			);
 			path = viewController;
@@ -244,6 +252,15 @@
 				36D2A1B0267E0237002E962F /* Calendar+Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		36D2A1B5267E07EA002E962F /* infos */ = {
+			isa = PBXGroup;
+			children = (
+				36D2A1B6267E07F7002E962F /* InfosViewController.swift */,
+				36D2A1BA267E0DAA002E962F /* InfoViewModel.swift */,
+			);
+			path = infos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,8 +395,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D2A189267DE199002E962F /* EventDTO.swift in Sources */,
+				36D2A1B9267E0C47002E962F /* InfoRepository.swift in Sources */,
 				36D2A183267DE0F4002E962F /* ApiService.swift in Sources */,
 				36D2A191267DE501002E962F /* EventMapper.swift in Sources */,
+				36D2A1B7267E07F7002E962F /* InfosViewController.swift in Sources */,
+				36D2A1BB267E0DAA002E962F /* InfoViewModel.swift in Sources */,
 				36D2A1A7267DF106002E962F /* EventViewModel.swift in Sources */,
 				36D2A184267DE0F4002E962F /* ApiValues.swift in Sources */,
 				36D2A1B1267E0237002E962F /* Calendar+Extension.swift in Sources */,

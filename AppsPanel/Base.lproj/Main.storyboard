@@ -8,17 +8,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Infos-->
         <scene sceneID="rJQ-Qs-1En">
             <objects>
-                <viewController id="fY7-SW-ry5" sceneMemberID="viewController">
+                <viewController id="fY7-SW-ry5" customClass="InfosViewController" customModule="AppsPanel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFa-Ad-dTc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bF-bB-iEI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LvV-xG-BS2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2bF-bB-iEI" firstAttribute="top" secondItem="dFa-Ad-dTc" secondAttribute="top" id="U5p-h0-tQl"/>
+                            <constraint firstItem="LvV-xG-BS2" firstAttribute="bottom" secondItem="2bF-bB-iEI" secondAttribute="bottom" id="Z3E-zl-jS9"/>
+                            <constraint firstItem="LvV-xG-BS2" firstAttribute="trailing" secondItem="2bF-bB-iEI" secondAttribute="trailing" id="mhI-Bj-KRG"/>
+                            <constraint firstItem="2bF-bB-iEI" firstAttribute="leading" secondItem="LvV-xG-BS2" secondAttribute="leading" id="u1A-Tt-odQ"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="SR4-d9-0Jf"/>
+                    <tabBarItem key="tabBarItem" title="Infos" id="SR4-d9-0Jf"/>
+                    <connections>
+                        <outlet property="infosWKWebView" destination="2bF-bB-iEI" id="eNm-F9-MXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSP-ja-i60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
